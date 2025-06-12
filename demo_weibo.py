@@ -1,7 +1,7 @@
 import requests  # 导入requests库，用于发送HTTP请求
 from urllib.parse import urlencode  # 导入urlencode函数，用于构建URL参数
 import time  # 导入time模块，用于添加时间延迟
-import re
+import re  #正则表达式
 import random  # 导入random模块，用于生成随机数
 
 
@@ -41,21 +41,7 @@ class Get_url():
             'http': 'None',
             'https': 'None',
         }
-        self.listdata = {
-            "goods_type": 2,
-            "list_rows": 10,
-            "page":1,
-            "series_id":0
-        }
-        self.goodsdata={
-            'id':'3691',
-            'order':'asc',
-            'page':1,
-            'sort':'price',
-            'type':2
-        }
         self.cookies={'cookies':'SCF=AiGlm1S8MPmlRb6iQ-F4SQQpGK1kSp76lVu0XOxSaugTvw7C8MmSmel8Ph1k2wIEahb7-ojPOBSIywOD-JvtBnw.; SUB=_2A25FThikDeRhGeBI71oQ-SzNwjqIHXVmIhRsrDV8PUNbmtAbLWzVkW9NRpKKIFEEZVzIQ0aDAztrXla-jQ9vkYAe; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WWM3jzcfJED8zEySAr-Nayr5NHD95QcSoBReK.EeK.cWs4DqcjMi--NiK.Xi-2Ri--ciKnRi-zNSoqX1h24eo24Sntt; ALF=02_1752298997; _s_tentry=passport.weibo.com; Apache=5509938242562.504.1749707000130; SINAGLOBAL=5509938242562.504.1749707000130; ULV=1749707000190:1:1:1:5509938242562.504.1749707000130:; WBPSESS=ci3NQz4P7pw07tMfOhf2Y0iNlsyUB_NrF2Z0ZejtVxhhGwkW2n1KKOuO7n3l4pOjbL5bKqfjVq3GycWYf-Tn2UPsIfGz0bPT-88OZ3jpWThIQPg214z_EQ-9wJgFp8T-CwdKwpFAiUVVx-WiwAEU1Q=='}
-
         # 构建headers请求头 把ua伪造头通过random随机选取一个传进去
         self.headers = {
     "accept": "application/json, text/plain, */*",
@@ -120,12 +106,10 @@ class Get_url():
         # print(josn_data)
         self.parse_hot_data(josn_data)
         print('分界线111111')
-        # print(detail_data)
 
 
     # 按页数抓取数据
     def get_hot_search(self,keyword):
-        # https://m.weibo.cn/api/container/getIndex?containerid=100103type=1&q=巴以冲突&page_type=searchall&page=1
         # 构建请求参数
         host='m.weibo.cn'
         params = {
@@ -149,7 +133,7 @@ class Get_url():
 
 
 
-        修改后的页面爬取解析函数
+        #修改后的页面爬取解析函数
     def parse_hot_data(self,data):
         # 提取信息
         for card in data["data"]["cards"]:

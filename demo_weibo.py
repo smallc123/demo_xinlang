@@ -41,7 +41,7 @@ class Get_url():
             'http': 'None',
             'https': 'None',
         }
-        self.cookies={'cookies':'SCF=AiGlm1S8MPmlRb6iQ-F4SQQpGK1kSp76lVu0XOxSaugTvw7C8MmSmel8Ph1k2wIEahb7-ojPOBSIywOD-JvtBnw.; SUB=_2A25FThikDeRhGeBI71oQ-SzNwjqIHXVmIhRsrDV8PUNbmtAbLWzVkW9NRpKKIFEEZVzIQ0aDAztrXla-jQ9vkYAe; SUBP=0033WrSXqPxfM725Ws9jqgMF55529P9D9WWM3jzcfJED8zEySAr-Nayr5NHD95QcSoBReK.EeK.cWs4DqcjMi--NiK.Xi-2Ri--ciKnRi-zNSoqX1h24eo24Sntt; ALF=02_1752298997; _s_tentry=passport.weibo.com; Apache=5509938242562.504.1749707000130; SINAGLOBAL=5509938242562.504.1749707000130; ULV=1749707000190:1:1:1:5509938242562.504.1749707000130:; WBPSESS=ci3NQz4P7pw07tMfOhf2Y0iNlsyUB_NrF2Z0ZejtVxhhGwkW2n1KKOuO7n3l4pOjbL5bKqfjVq3GycWYf-Tn2UPsIfGz0bPT-88OZ3jpWThIQPg214z_EQ-9wJgFp8T-CwdKwpFAiUVVx-WiwAEU1Q=='}
+        self.cookies={'cookies':'填入自己的cookies'}
         # 构建headers请求头 把ua伪造头通过random随机选取一个传进去
         self.headers = {
     "accept": "application/json, text/plain, */*",
